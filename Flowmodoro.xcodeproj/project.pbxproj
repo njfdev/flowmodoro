@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0126138C2B9BFBC2005B7892 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126138B2B9BFBC2005B7892 /* TimerView.swift */; };
+		012613902B9CD0AE005B7892 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126138F2B9CD0AE005B7892 /* Counter.swift */; };
 		01AA3CAA2B9948E2004A020F /* FlowmodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA3CA92B9948E2004A020F /* FlowmodoroApp.swift */; };
 		01AA3CAC2B9948E2004A020F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA3CAB2B9948E2004A020F /* ContentView.swift */; };
 		01AA3CAE2B9948E3004A020F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AA3CAD2B9948E3004A020F /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0126138B2B9BFBC2005B7892 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		0126138F2B9CD0AE005B7892 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		01AA3CA62B9948E2004A020F /* Flowmodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowmodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AA3CA92B9948E2004A020F /* FlowmodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowmodoroApp.swift; sourceTree = "<group>"; };
 		01AA3CAB2B9948E2004A020F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				01AA3CA92B9948E2004A020F /* FlowmodoroApp.swift */,
 				01AA3CAB2B9948E2004A020F /* ContentView.swift */,
 				0126138B2B9BFBC2005B7892 /* TimerView.swift */,
+				0126138F2B9CD0AE005B7892 /* Counter.swift */,
 				01AA3CAD2B9948E3004A020F /* Assets.xcassets */,
 				01AA3CAF2B9948E3004A020F /* Flowmodoro.entitlements */,
 				01AA3CB02B9948E3004A020F /* Preview Content */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012613902B9CD0AE005B7892 /* Counter.swift in Sources */,
 				01AA3CAC2B9948E2004A020F /* ContentView.swift in Sources */,
 				01AA3CD52B9A7AC0004A020F /* CircularProgressView.swift in Sources */,
 				01AA3CAA2B9948E2004A020F /* FlowmodoroApp.swift in Sources */,

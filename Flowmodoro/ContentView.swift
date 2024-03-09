@@ -9,9 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var timerMode = TimerTypes.Stopwatch
-    @State private var timerLength = 0
-    @State private var timerValue = 0
+    @StateObject var counter = Counter()
     
     var body: some View {
         VStack {
@@ -22,18 +20,13 @@ struct ContentView: View {
                 .padding(.top)
             Spacer()
             ZStack {
-                TimerView(mode: timerMode, timerLength: $timerLength, timerValue: $timerValue)
+                TimerView(counter: counter)
                     .frame(width: 275)
-                Button(timerMode == TimerTypes.Countdown ? "End Break" : "Start Break") {
-                    if (timerMode == TimerTypes.Countdown) {
-                        timerLength = 0
-                        timerValue = 0
-                        timerMode = TimerTypes.Stopwatch
-                    } else if (timerMode == TimerTypes.Stopwatch) {
-                        timerLength = Int(timerValue/5)
-                        timerValue = timerLength
-                        print(timerLength, timerValue)
-                        timerMode = TimerTypes.Countdown
+                Button(counter.mode == TimerTypes.Countdown ? "End Break" : "Start Break") {
+                    if (counter.mode == TimerTypes.Countdown) {
+                        counter.setMode(mode: TimerTypes.Stopwatch)
+                    } else if (counter.mode == TimerTypes.Stopwatch) {
+                        counter.setMode(mode: TimerTypes.Countdown, newTimerLength: counter.timerValue/5)
                     }
                 }
                 .foregroundColor(.blue.opacity(0.8))

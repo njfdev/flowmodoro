@@ -14,6 +14,7 @@
 		01AA3CBC2B9948E3004A020F /* FlowmodoroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA3CBB2B9948E3004A020F /* FlowmodoroTests.swift */; };
 		01AA3CC62B9948E3004A020F /* FlowmodoroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA3CC52B9948E3004A020F /* FlowmodoroUITests.swift */; };
 		01AA3CC82B9948E3004A020F /* FlowmodoroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA3CC72B9948E3004A020F /* FlowmodoroUITestsLaunchTests.swift */; };
+		01AA3CD52B9A7AC0004A020F /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA3CD42B9A7AC0004A020F /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		01AA3CC12B9948E3004A020F /* FlowmodoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowmodoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AA3CC52B9948E3004A020F /* FlowmodoroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowmodoroUITests.swift; sourceTree = "<group>"; };
 		01AA3CC72B9948E3004A020F /* FlowmodoroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowmodoroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		01AA3CD42B9A7AC0004A020F /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				01AA3CAD2B9948E3004A020F /* Assets.xcassets */,
 				01AA3CAF2B9948E3004A020F /* Flowmodoro.entitlements */,
 				01AA3CB02B9948E3004A020F /* Preview Content */,
+				01AA3CD42B9A7AC0004A020F /* CircularProgressView.swift */,
 			);
 			path = Flowmodoro;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01AA3CAC2B9948E2004A020F /* ContentView.swift in Sources */,
+				01AA3CD52B9A7AC0004A020F /* CircularProgressView.swift in Sources */,
 				01AA3CAA2B9948E2004A020F /* FlowmodoroApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,8 +8,6 @@
 import SwiftUI
 import Combine
 
-let timerLength = (0.5 * 60 * 60) / 5.0
-
 public enum TimerTypes {
     case Stopwatch
     case Countdown
@@ -23,7 +21,9 @@ func runTimer() -> Publishers.Autoconnect<Timer.TimerPublisher> {
 struct TimerView: View {
     let mode: TimerTypes
     
-    @State private var timeRemaining = timerLength
+    
+    @Binding var timerLength: Int
+    @Binding var timerValue: Int
     @State private var timer = runTimer()
     @State private var isTimerRunning = true
     
@@ -32,8 +32,8 @@ struct TimerView: View {
     var body: some View {
         VStack {
             ZStack {
-                CircularProgressView(progress: (timerLength-timeRemaining)/timerLength)
-                Text(formatter.string(from: timeRemaining)!)
+                CircularProgressView(progress: ((mode == TimerTypes.Countdown) && (timerLength > 0)) ? (Double((timerLength-timerValue))/Double(timerLength)) : 0)
+                Text((mode == TimerTypes.Countdown && timerValue == 0) ? "Done!" : formatter.string(from: Double(timerValue))!)
                     .fontWeight(.black)
                     .lineLimit(1)
                     .font(.system(size: 48))
@@ -41,14 +41,17 @@ struct TimerView: View {
                     .minimumScaleFactor(0.01)
                     .padding(.all, 25)
                     .onReceive(timer) { _ in
-                        if isTimerRunning && timeRemaining > 0 {
-                            timeRemaining -= 1
+                        if isTimerRunning && (timerValue > 0 || mode == TimerTypes.Stopwatch) {
+                            timerValue += mode == TimerTypes.Countdown ? -1 : 1
                         }
                     }
             }
             .onAppear() {
                 formatter.allowedUnits = [.hour, .minute, .second]
                 formatter.unitsStyle = .positional
+                if (mode == TimerTypes.Countdown) {
+                    timerValue = timerLength
+                }
             }
             HStack {
                 Button() {
@@ -57,7 +60,7 @@ struct TimerView: View {
                     isTimerRunning ? Image(systemName: "pause.fill") : Image(systemName: "play.fill")
                 }
                 Button() {
-                    timeRemaining = timerLength
+                    timerValue = timerLength
                 } label: {
                     Image(systemName: "gobackward")
                 }
@@ -70,5 +73,14 @@ struct TimerView: View {
 }
 
 #Preview {
-    TimerView(mode: TimerTypes.Countdown)
+    struct Preview: View {
+        @State var timerLength = 5*60
+        @State var timerValue = 5*60
+        
+        var body: some View {
+            TimerView(mode: TimerTypes.Countdown, timerLength: $timerLength, timerValue: $timerValue)
+        }
+    }
+    
+    return Preview()
 }

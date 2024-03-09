@@ -19,11 +19,14 @@ class Counter: ObservableObject {
     private var timerLength = 0
     
     init() {
+        mode = fetchTimerType()
         startTime = fetchStartTime()
         timerValue = fetchElapsedTime() ?? 0
         
         if (startTime != nil) {
             start()
+        } else if (fetchTimerLength() != nil) {
+            updateProgress()
         }
     }
 }
@@ -35,9 +38,10 @@ extension Counter {
         mode = fetchTimerType()
         startTime = fetchStartTime()
         timerValue = fetchElapsedTime() ?? 0
+        timerLength = fetchTimerLength() ?? 0
         
         if startTime == nil {
-            startTime = Date().addingTimeInterval(Double(-(mode == TimerTypes.Stopwatch ? timerValue : timerLength - timerValue)))
+            startTime = Date().addingTimeInterval(Double(-(mode == TimerTypes.Stopwatch ? timerValue : (timerLength - timerValue))))
         }
         
         updateProgress()
@@ -93,6 +97,7 @@ extension Counter {
         self.timerLength = length
         self.timerValue = length
         saveElapsedTime()
+        saveTimerLength()
         self.start()
     }
     
@@ -111,6 +116,7 @@ extension Counter {
         startTime = nil
         saveElapsedTime()
         saveStartTime()
+        saveTimerLength()
         updateProgress()
     }
     
@@ -152,4 +158,13 @@ private extension Counter {
     func fetchTimerType() -> TimerTypes {
         TimerTypes(rawValue: (UserDefaults.standard.object(forKey: "timerType") as? Int) ?? TimerTypes.Stopwatch.rawValue) ?? TimerTypes.Stopwatch
     }
-} 
+    
+    
+    func saveTimerLength(){
+        UserDefaults.standard.set(timerLength, forKey: "timerLength")
+    }
+    
+    func fetchTimerLength() -> Int? {
+        UserDefaults.standard.object(forKey: "timerLength") as? Int
+    }
+}

@@ -32,6 +32,7 @@ struct TimerView: View {
             }
             .onAppear() {
                 formatter.allowedUnits = [.hour, .minute, .second]
+                formatter.collapsesLargestUnit = true
                 formatter.unitsStyle = .positional
             }
             HStack {

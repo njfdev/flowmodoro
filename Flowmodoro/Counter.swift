@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import ActivityKit
 
 class Counter: ObservableObject {
     @Published private(set) var mode = TimerTypes.Stopwatch
@@ -17,6 +18,7 @@ class Counter: ObservableObject {
     private var startTime: Date? { didSet { saveStartTime() } }
     private var timer: AnyCancellable?
     private var timerLength = 0
+    private var activity: Activity<CountdownAttributes>? = nil
     
     init() {
         mode = fetchTimerType()
@@ -70,6 +72,10 @@ extension Counter {
                 updateProgress()
             }
         isRunning = true
+        
+        if (mode == TimerTypes.Countdown) {
+            startActivity()
+        }
     }
     
     func setMode(mode: TimerTypes, newTimerLength: Int? = nil) {
@@ -118,6 +124,7 @@ extension Counter {
         saveStartTime()
         saveTimerLength()
         updateProgress()
+        stopActivity()
     }
     
     func stop() {
@@ -129,6 +136,38 @@ extension Counter {
 }
 
 private extension Counter {
+    func startActivity() {
+        if (activity != nil) {
+            Task {
+                await activity?.end(nil, dismissalPolicy: .immediate)
+            }
+        }
+        
+        let attributes = CountdownAttributes()
+        let state = CountdownAttributes.ContentState(startTime: startTime ?? .now, timerLength: timerLength)
+        let content = ActivityContent(state: state, staleDate: nil)
+        
+        activity = try? Activity<CountdownAttributes>.request(attributes: attributes, content: content, pushType: nil)
+    }
+    
+    func stopActivity() {
+        let state = CountdownAttributes.ContentState(startTime: startTime ?? .now, timerLength: timerLength)
+        let content = ActivityContent(state: state, staleDate: nil)
+        
+        Task {
+            await activity?.end(content, dismissalPolicy: .immediate)
+        }
+    }
+    
+    func updateActivity() {
+        let state = CountdownAttributes.ContentState(startTime: startTime ?? .now, timerLength: timerLength)
+        let content = ActivityContent(state: state, staleDate: nil)
+        
+        Task {
+            await activity?.update(content)
+        }
+    }
+    
     func saveStartTime() {
         if let startTime = startTime {
             UserDefaults.standard.set(startTime, forKey: "startTime")

@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		0126138C2B9BFBC2005B7892 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126138B2B9BFBC2005B7892 /* TimerView.swift */; };
 		012613902B9CD0AE005B7892 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126138F2B9CD0AE005B7892 /* Counter.swift */; };
+		012613982B9D5048005B7892 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012613972B9D5048005B7892 /* WidgetKit.framework */; };
+		0126139A2B9D5048005B7892 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 012613992B9D5048005B7892 /* SwiftUI.framework */; };
+		012613A32B9D5049005B7892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012613A22B9D5049005B7892 /* Assets.xcassets */; };
+		012613A82B9D5049005B7892 /* FlowmodoroWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 012613952B9D5048005B7892 /* FlowmodoroWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		012613AE2B9D5272005B7892 /* FlowmodoroLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012613AD2B9D5272005B7892 /* FlowmodoroLiveActivity.swift */; };
+		012613B02B9F2E05005B7892 /* CountdownAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012613AF2B9F2E05005B7892 /* CountdownAttributes.swift */; };
+		012613B12B9F2E05005B7892 /* CountdownAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012613AF2B9F2E05005B7892 /* CountdownAttributes.swift */; };
 		01AA3CAA2B9948E2004A020F /* FlowmodoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA3CA92B9948E2004A020F /* FlowmodoroApp.swift */; };
 		01AA3CAC2B9948E2004A020F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AA3CAB2B9948E2004A020F /* ContentView.swift */; };
 		01AA3CAE2B9948E3004A020F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AA3CAD2B9948E3004A020F /* Assets.xcassets */; };
@@ -20,6 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		012613A62B9D5049005B7892 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01AA3C9E2B9948E2004A020F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 012613942B9D5048005B7892;
+			remoteInfo = FlowmodoroWidgetsExtension;
+		};
 		01AA3CB82B9948E3004A020F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 01AA3C9E2B9948E2004A020F /* Project object */;
@@ -36,9 +50,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		012613AC2B9D5049005B7892 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				012613A82B9D5049005B7892 /* FlowmodoroWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0126138B2B9BFBC2005B7892 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		0126138F2B9CD0AE005B7892 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		012613952B9D5048005B7892 /* FlowmodoroWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FlowmodoroWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		012613972B9D5048005B7892 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
+		012613992B9D5048005B7892 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
+		012613A22B9D5049005B7892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		012613A42B9D5049005B7892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		012613A52B9D5049005B7892 /* FlowmodoroWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlowmodoroWidgets.entitlements; sourceTree = "<group>"; };
+		012613AD2B9D5272005B7892 /* FlowmodoroLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowmodoroLiveActivity.swift; sourceTree = "<group>"; };
+		012613AF2B9F2E05005B7892 /* CountdownAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownAttributes.swift; sourceTree = "<group>"; };
 		01AA3CA62B9948E2004A020F /* Flowmodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flowmodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01AA3CA92B9948E2004A020F /* FlowmodoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowmodoroApp.swift; sourceTree = "<group>"; };
 		01AA3CAB2B9948E2004A020F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +90,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		012613922B9D5048005B7892 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0126139A2B9D5048005B7892 /* SwiftUI.framework in Frameworks */,
+				012613982B9D5048005B7892 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01AA3CA32B9948E2004A020F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,12 +123,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		012613962B9D5048005B7892 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				012613972B9D5048005B7892 /* WidgetKit.framework */,
+				012613992B9D5048005B7892 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0126139B2B9D5048005B7892 /* FlowmodoroWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				012613A22B9D5049005B7892 /* Assets.xcassets */,
+				012613A42B9D5049005B7892 /* Info.plist */,
+				012613A52B9D5049005B7892 /* FlowmodoroWidgets.entitlements */,
+				012613AD2B9D5272005B7892 /* FlowmodoroLiveActivity.swift */,
+				012613AF2B9F2E05005B7892 /* CountdownAttributes.swift */,
+			);
+			path = FlowmodoroWidgets;
+			sourceTree = "<group>";
+		};
 		01AA3C9D2B9948E2004A020F = {
 			isa = PBXGroup;
 			children = (
 				01AA3CA82B9948E2004A020F /* Flowmodoro */,
 				01AA3CBA2B9948E3004A020F /* FlowmodoroTests */,
 				01AA3CC42B9948E3004A020F /* FlowmodoroUITests */,
+				0126139B2B9D5048005B7892 /* FlowmodoroWidgets */,
+				012613962B9D5048005B7892 /* Frameworks */,
 				01AA3CA72B9948E2004A020F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +162,7 @@
 				01AA3CA62B9948E2004A020F /* Flowmodoro.app */,
 				01AA3CB72B9948E3004A020F /* FlowmodoroTests.xctest */,
 				01AA3CC12B9948E3004A020F /* FlowmodoroUITests.xctest */,
+				012613952B9D5048005B7892 /* FlowmodoroWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +210,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		012613942B9D5048005B7892 /* FlowmodoroWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 012613A92B9D5049005B7892 /* Build configuration list for PBXNativeTarget "FlowmodoroWidgetsExtension" */;
+			buildPhases = (
+				012613912B9D5048005B7892 /* Sources */,
+				012613922B9D5048005B7892 /* Frameworks */,
+				012613932B9D5048005B7892 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlowmodoroWidgetsExtension;
+			productName = FlowmodoroWidgetsExtension;
+			productReference = 012613952B9D5048005B7892 /* FlowmodoroWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		01AA3CA52B9948E2004A020F /* Flowmodoro */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01AA3CCB2B9948E3004A020F /* Build configuration list for PBXNativeTarget "Flowmodoro" */;
@@ -148,10 +234,12 @@
 				01AA3CA22B9948E2004A020F /* Sources */,
 				01AA3CA32B9948E2004A020F /* Frameworks */,
 				01AA3CA42B9948E2004A020F /* Resources */,
+				012613AC2B9D5049005B7892 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				012613A72B9D5049005B7892 /* PBXTargetDependency */,
 			);
 			name = Flowmodoro;
 			productName = Flowmodoro;
@@ -204,6 +292,9 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					012613942B9D5048005B7892 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					01AA3CA52B9948E2004A020F = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -233,11 +324,20 @@
 				01AA3CA52B9948E2004A020F /* Flowmodoro */,
 				01AA3CB62B9948E3004A020F /* FlowmodoroTests */,
 				01AA3CC02B9948E3004A020F /* FlowmodoroUITests */,
+				012613942B9D5048005B7892 /* FlowmodoroWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		012613932B9D5048005B7892 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012613A32B9D5049005B7892 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01AA3CA42B9948E2004A020F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +364,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		012613912B9D5048005B7892 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				012613B12B9F2E05005B7892 /* CountdownAttributes.swift in Sources */,
+				012613AE2B9D5272005B7892 /* FlowmodoroLiveActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		01AA3CA22B9948E2004A020F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +382,7 @@
 				01AA3CD52B9A7AC0004A020F /* CircularProgressView.swift in Sources */,
 				01AA3CAA2B9948E2004A020F /* FlowmodoroApp.swift in Sources */,
 				0126138C2B9BFBC2005B7892 /* TimerView.swift in Sources */,
+				012613B02B9F2E05005B7892 /* CountdownAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +406,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		012613A72B9D5049005B7892 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 012613942B9D5048005B7892 /* FlowmodoroWidgetsExtension */;
+			targetProxy = 012613A62B9D5049005B7892 /* PBXContainerItemProxy */;
+		};
 		01AA3CB92B9948E3004A020F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 01AA3CA52B9948E2004A020F /* Flowmodoro */;
@@ -309,6 +424,82 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		012613AA2B9D5049005B7892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FlowmodoroWidgets/FlowmodoroWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M9MGUVRXK2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlowmodoroWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FlowmodoroWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.njf.Flowmodoro.FlowmodoroWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		012613AB2B9D5049005B7892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = FlowmodoroWidgets/FlowmodoroWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M9MGUVRXK2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlowmodoroWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FlowmodoroWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.njf.Flowmodoro.FlowmodoroWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		01AA3CC92B9948E3004A020F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -426,6 +617,7 @@
 		01AA3CCC2B9948E3004A020F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Flowmodoro/Flowmodoro.entitlements;
@@ -437,6 +629,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -465,6 +659,7 @@
 		01AA3CCD2B9948E3004A020F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Flowmodoro/Flowmodoro.entitlements;
@@ -476,6 +671,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -594,6 +791,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		012613A92B9D5049005B7892 /* Build configuration list for PBXNativeTarget "FlowmodoroWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				012613AA2B9D5049005B7892 /* Debug */,
+				012613AB2B9D5049005B7892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		01AA3CA12B9948E2004A020F /* Build configuration list for PBXProject "Flowmodoro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
